@@ -1,0 +1,1108 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+* ::-webkit-scrollbar {
+  width: .5em;
+}
+
+* ::-webkit-scrollbar-track {
+  width: 2em;
+  background: 0 0;
+}
+
+* ::-webkit-scrollbar-thumb {
+  width: 1em;
+  border-radius: .6em;
+  background: var(--scrollbar-thumb);
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.dark-mode {
+  --scrollbar-thumb: #1a1a1a;
+  --scrollbar-thumb-hover: #2f2f2f;
+}
+
+.light-mode {
+  --scrollbar-thumb: #e6e6e6;
+  --scrollbar-thumb-hover: #dbdbdb;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body .tooltip-text {
+  margin-bottom: 0.2em;
+}
+
+body .MuiTooltip-tooltip {
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+  background-color: #2c2f33;
+}
+
+body.dark-mode .tooltip-text {
+  color: #dddddd;
+}
+
+body.dark-mode .MuiTooltip-tooltip {
+  background-color: black !important;
+}
+
+body.dark-mode .MuiTooltip-arrow::before {
+  color: black;
+}
+
+body.dark-mode .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.dark-mode .content .sidebar {
+  background-color: #222325;
+  min-width: 6.4em;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body.dark-mode .content .sidebar .profile {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+body.dark-mode .content .sidebar .profile img {
+  width: 4.8em;
+  height: 4.8em;
+  border: 4px solid #A7A7A7;
+  cursor: pointer;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+}
+
+body.dark-mode .content .sidebar .top-seperator {
+  width: 5em;
+  height: 0.3em;
+  background-color: #d2d2d227;
+  margin-top: 0.5em;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.2em;
+}
+
+body.dark-mode .content .sidebar .bottom-seperator {
+  width: 5em;
+  height: 0.3em;
+  background-color: #d2d2d227;
+  margin-bottom: 0.5em;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.2em;
+}
+
+body.dark-mode .content .sidebar .servers {
+  overflow: hidden scroll;
+  max-height: 32.5em;
+  scrollbar-width: none;
+}
+
+body.dark-mode .content .sidebar .servers::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+body.dark-mode .content .sidebar .servers .server img {
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  border-radius: 0.2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  -webkit-box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.37);
+}
+
+body.dark-mode .content .sidebar .servers .server img:last-child {
+  margin-bottom: 0;
+}
+
+body.dark-mode .content .sidebar .servers .server:first-child {
+  margin-top: 0;
+}
+
+body.dark-mode .content .sidebar .search-button {
+  margin-top: 0.4em;
+  cursor: pointer;
+  width: 5.5em;
+  height: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #7C7C7C;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+body.dark-mode .content .sidebar .search-button:hover {
+  background-color: #6d6d6d;
+}
+
+body.dark-mode .content .sidebar .search-button:active {
+  background-color: #575757;
+}
+
+body.dark-mode .content .sidebar .search-button img {
+  width: 1.4em;
+  height: 1.6em;
+}
+
+body.dark-mode .content .sidebar .settings-button {
+  bottom: 0;
+  margin-bottom: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #323232;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 6em;
+  height: 4em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.dark-mode .content .sidebar .settings-button:hover {
+  background-color: #282828;
+}
+
+body.dark-mode .content .sidebar .settings-button:active {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .content .sidebar .settings-button img {
+  margin-top: 0.15em;
+  width: 4em;
+  height: 4em;
+}
+
+body.dark-mode .content .settings {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-transition: color 0.5s ease, background-color 0.5s ease !important;
+  transition: color 0.5s ease, background-color 0.5s ease !important;
+  z-index: 999999;
+  color: white;
+  background-color: #35383d;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.dark-mode .content .settings div {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.dark-mode .content .settings div h1 {
+  margin-top: 1em;
+}
+
+body.dark-mode .content .settings div h2 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #dbdbdb;
+  font-weight: 550;
+}
+
+body.dark-mode .content .settings div a {
+  color: #5c9cff;
+}
+
+body.dark-mode .content .settings div .settings-seperator {
+  -webkit-transition: background-color 0.5s ease !important;
+  transition: background-color 0.5s ease !important;
+  width: 100%;
+  height: 0.2em;
+  background-color: #50555e;
+  margin-top: 0.5em;
+}
+
+body.dark-mode .content .settings div .select .selector {
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+  width: 5em;
+  height: 0.15em;
+  background-color: white;
+  border-radius: 0.2em;
+  -webkit-transition: background-color 1s !important;
+  transition: background-color 1s !important;
+}
+
+body.dark-mode .content .settings div .select .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.dark-mode .content .settings div .select .options .light {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3em;
+  background-color: #242424;
+  margin-right: 1em;
+  border-radius: 0.2em;
+  color: white;
+  padding: 3em;
+  padding-bottom: 1em !important;
+  padding-top: 1em !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.dark-mode .content .settings div .select .options .light:hover {
+  background-color: #1d1d1c;
+}
+
+body.dark-mode .content .settings div .select .options .light:active {
+  background-color: #171717;
+}
+
+body.dark-mode .content .settings div .select .options .dark {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3em;
+  background-color: #242424;
+  border-radius: 0.2em;
+  color: white;
+  padding: 3em;
+  padding-bottom: 1em !important;
+  padding-top: 1em !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.dark-mode .content .settings div .select .options .dark:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body.dark-mode .content .settings div .select .options .dark:active {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+
+body.dark-mode .content .settings .logout {
+  cursor: pointer;
+  background-color: #e44848;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+  font-weight: 800;
+  padding: 0.5em;
+  border: none;
+  margin-top: 2em;
+  border-radius: 0.2em;
+}
+
+body.dark-mode .content .settings .logout:hover {
+  background-color: #e92a2a;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body.dark-mode .content .settings .logout:active {
+  background-color: red;
+}
+
+body.dark-mode .content .settings .exit {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 2em;
+  cursor: pointer;
+  background-color: #404449;
+  height: 3.3em;
+  width: 3.3em;
+  border-radius: 5em;
+  border: 2px solid #b6b6b6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.dark-mode .content .settings .exit:hover {
+  background-color: #33363a;
+}
+
+body.dark-mode .content .settings .exit:active {
+  background-color: #2d2f33;
+  margin-top: 2.2em;
+}
+
+body.dark-mode .content .settings .exit img {
+  width: 1em;
+  height: 1em;
+  margin-left: -1px;
+}
+
+body.dark-mode .content .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.dark-mode .content .main .main-content {
+  margin: 2em;
+  margin-left: 2.5em;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile {
+  width: 50em;
+  height: 35em;
+  background-color: #222325;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile h1 {
+  font-size: 2em;
+  color: white;
+  padding-left: 1em;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity {
+  margin: 0 auto !important;
+  border-radius: 0.2em;
+  width: 90%;
+  background-color: #404040;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options {
+  margin-top: 1em;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .public, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .private, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .invisible {
+  cursor: pointer;
+  background-color: #535353;
+  padding: 0.4em 1em;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 8em !important;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .public:hover, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .private:hover, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .invisible:hover {
+  background: #777777;
+  cursor: pointer;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .public img, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .private img, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .invisible img {
+  margin-right: 5px;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .public.selected, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .private.selected, body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .options .invisible.selected {
+  background-color: #777777;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-visiblity .selector {
+  width: 8em;
+  height: 0.3em;
+  border-radius: 1em 1em 0em 0em;
+  background-color: white;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-information {
+  background-color: #333333;
+  border-radius: 0.3em;
+  margin: 1em auto !important;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  text-align: center;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-information h3 {
+  color: white;
+}
+
+body.dark-mode .content .main .main-content .soosbot-profile .profile-information img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50em;
+  margin-right: 0.4em;
+}
+
+body.dark-mode .content .dropdown {
+  cursor: pointer;
+}
+
+body.dark-mode .content .dropdown .select-box {
+  width: 20em !important;
+  color: white;
+  background-color: #242424;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+  padding: 12px 24px;
+  border-radius: 0.3em;
+  margin-bottom: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body.dark-mode .content .dropdown .select-box:hover {
+  background-color: #1b1b1b;
+}
+
+body.dark-mode .content .dropdown .select-box .loading {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+body.dark-mode .content .dropdown .select-box .arrow {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+body.dark-mode .content .dropdown .options-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  background: #2c2c2c;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+  max-height: 10em;
+  overflow-y: scroll;
+  position: absolute;
+  width: 20em;
+}
+
+body.dark-mode .content .dropdown .options-box ul {
+  list-style: none;
+}
+
+body.dark-mode .content .dropdown .options-box ul li {
+  padding: 12px 24px;
+  background-color: #252525;
+  overflow-y: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.dark-mode .content .dropdown .options-box ul li:hover {
+  background-color: #1f1f1f;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body.dark-mode .content .dropdown .options-box ul li:active {
+  background-color: #181818;
+}
+
+body.dark-mode .content .dropdown .options-box ul li.selected {
+  background-color: #181818;
+}
+
+body.light-mode {
+  background-color: #e6e6e6;
+}
+
+body.light-mode .MuiTooltip-tooltip {
+  background-color: white !important;
+}
+
+body.light-mode .MuiTooltip-arrow::before {
+  color: white;
+}
+
+body.light-mode .tooltip-text {
+  color: black;
+}
+
+body.light-mode .sidebar {
+  background-color: #c2c2c2;
+  width: 6.4em;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body.light-mode .sidebar .profile {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+body.light-mode .sidebar .profile img {
+  width: 4.8em;
+  height: 4.8em;
+  border: 4px solid #494949;
+  cursor: pointer;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+}
+
+body.light-mode .sidebar .top-seperator {
+  width: 5em;
+  height: 0.3em;
+  background-color: #00000045;
+  margin-top: 0.5em;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.2em;
+}
+
+body.light-mode .sidebar .bottom-seperator {
+  width: 5em;
+  height: 0.3em;
+  background-color: #00000045;
+  margin-bottom: 0.5em;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.2em;
+}
+
+body.light-mode .sidebar .servers {
+  overflow: hidden scroll;
+  max-height: 32.5em;
+  scrollbar-width: none;
+}
+
+body.light-mode .sidebar .servers::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+body.light-mode .sidebar .servers .server img {
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  border-radius: 0.2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  -webkit-box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.37);
+}
+
+body.light-mode .sidebar .servers .server img:last-child {
+  margin-bottom: 0;
+}
+
+body.light-mode .sidebar .servers .server:first-child {
+  margin-top: 0;
+}
+
+body.light-mode .sidebar .search-button {
+  margin-top: 0.4em;
+  cursor: pointer;
+  width: 5.5em;
+  height: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #999898;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+body.light-mode .sidebar .search-button:hover {
+  background-color: #818181;
+}
+
+body.light-mode .sidebar .search-button:active {
+  background-color: #636363;
+}
+
+body.light-mode .sidebar .search-button img {
+  width: 1.4em;
+  height: 1.6em;
+}
+
+body.light-mode .sidebar .settings-button {
+  bottom: 0;
+  margin-bottom: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #535353;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 6em;
+  height: 4em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.light-mode .sidebar .settings-button:hover {
+  background-color: #c5c5c5;
+}
+
+body.light-mode .sidebar .settings-button:active {
+  background-color: #a8a7a7;
+}
+
+body.light-mode .sidebar .settings-button img {
+  margin-top: 0.15em;
+  width: 4em;
+  height: 4em;
+}
+
+body.light-mode .settings {
+  -webkit-transition: color 0.5s ease, background-color 0.5s ease !important;
+  transition: color 0.5s ease, background-color 0.5s ease !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 999999;
+  color: black;
+  background-color: #dddddd;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.light-mode .settings div {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.light-mode .settings div h1 {
+  margin-top: 1em;
+}
+
+body.light-mode .settings div h2 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #333333;
+  font-weight: 550;
+}
+
+body.light-mode .settings div a {
+  color: #5c9cff;
+}
+
+body.light-mode .settings div .settings-seperator {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  width: 100%;
+  height: 0.2em;
+  background-color: #c5c5c5;
+  margin-top: 0.5em;
+}
+
+body.light-mode .settings div .select .selector {
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+  width: 5em;
+  height: 0.15em;
+  background-color: black;
+  border-radius: 0.2em;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+body.light-mode .settings div .select .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.light-mode .settings div .select .options .light {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3em;
+  background-color: #bebebe;
+  margin-right: 1em;
+  border-radius: 0.2em;
+  color: black;
+  padding: 3em;
+  padding-bottom: 1em !important;
+  padding-top: 1em !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.light-mode .settings div .select .options .light:hover {
+  background-color: #9c9b9b;
+}
+
+body.light-mode .settings div .select .options .light:active {
+  background-color: #8f8f8f;
+}
+
+body.light-mode .settings div .select .options .dark {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3em;
+  background-color: #bebebe;
+  border-radius: 0.2em;
+  color: black;
+  padding: 3em;
+  padding-bottom: 1em !important;
+  padding-top: 1em !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.light-mode .settings div .select .options .dark:hover {
+  background-color: #9c9b9b;
+}
+
+body.light-mode .settings div .select .options .dark:active {
+  background-color: #8f8f8f;
+}
+
+body.light-mode .settings .logout {
+  cursor: pointer;
+  background-color: #e44848;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+  font-weight: 800;
+  padding: 0.5em;
+  border: none;
+  margin-top: 2em;
+  border-radius: 0.2em;
+}
+
+body.light-mode .settings .logout:hover {
+  background-color: #e92a2a;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body.light-mode .settings .logout:active {
+  background-color: red;
+}
+
+body.light-mode .settings .exit {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 2em;
+  cursor: pointer;
+  background-color: #d1d1d1;
+  height: 3.3em;
+  width: 3.3em;
+  border-radius: 5em;
+  border: 2px solid #5a5a5a;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.light-mode .settings .exit:hover {
+  background-color: #b6b4b4;
+}
+
+body.light-mode .settings .exit:active {
+  background-color: #b1b1b1;
+  margin-top: 2.2em;
+}
+
+body.light-mode .settings .exit img {
+  width: 1em;
+  height: 2em;
+  margin-left: -1px;
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+}
+
+body.light-mode .dropdown {
+  cursor: pointer;
+}
+
+body.light-mode .dropdown:active {
+  background-color: #c9c9c9;
+}
+
+body.light-mode .dropdown .select-box {
+  width: 20em !important;
+  color: black;
+  background-color: #d1d1d1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+  padding: 12px 24px;
+  border-radius: 0.3em;
+  margin-bottom: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body.light-mode .dropdown .select-box:hover {
+  background-color: #c9c9c9;
+}
+
+body.light-mode .dropdown .select-box:active {
+  background-color: #c9c9c9;
+}
+
+body.light-mode .dropdown .select-box .loading {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+body.light-mode .dropdown .select-box .arrow {
+  width: 1.2em;
+  height: 1.2em;
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+}
+
+body.light-mode .dropdown .options-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: black;
+  background: #d1d1d1;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+          box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.157);
+  max-height: 10em;
+  overflow-y: scroll;
+  position: absolute;
+  width: 20em;
+}
+
+body.light-mode .dropdown .options-box ul {
+  list-style: none;
+}
+
+body.light-mode .dropdown .options-box ul li {
+  padding: 12px 24px;
+  background-color: #d1d1d1;
+  overflow-y: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body.light-mode .dropdown .options-box ul li:hover {
+  background-color: #c9c9c9;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body.light-mode .dropdown .options-box ul li:active {
+  background-color: #a3a3a3;
+}
+
+body.light-mode .dropdown .options-box ul li.selected {
+  background-color: #b1b1b1;
+}
+
+body.light-mode .dropdown .options-box ul li.selected:hover {
+  background-color: #c9c9c9;
+}
+
+@media only screen and (max-width: 640px) {
+  .dropdown .select-box {
+    max-width: 12em !important;
+    padding: 12px 15px !important;
+  }
+  .dropdown .options-box {
+    max-width: 12em !important;
+  }
+  .soosbot-profile {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
