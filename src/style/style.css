@@ -235,7 +235,7 @@ body.dark-mode .content .settings {
   overflow-y: hidden;
   -webkit-transition: color 0.5s ease, background-color 0.5s ease !important;
   transition: color 0.5s ease, background-color 0.5s ease !important;
-  z-index: 999999;
+  z-index: 99;
   color: white;
   background-color: #35383d;
   top: 0;
@@ -419,6 +419,93 @@ body.dark-mode .content .settings .exit img {
   width: 1em;
   height: 1em;
   margin-left: -1px;
+}
+
+body.dark-mode .content .logoutPrompt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.685);
+  z-index: 100;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal {
+  position: absolute;
+  left: 33%;
+  top: 33%;
+  width: 30em;
+  height: 10em;
+  background-color: #313131;
+  border-radius: 0.2em;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal h1 {
+  color: white;
+  padding-left: 0.7em;
+  padding-top: 0.5em;
+  font-size: 1.8em;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal p {
+  color: #d6d6d6;
+  margin-left: 1.1em;
+  margin-top: 0.6em;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons {
+  width: 100%;
+  height: 50%;
+  background-color: #242424;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons button {
+  width: 7em;
+  height: 3em;
+  border-radius: 0.2em;
+  border: none;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .logout_button {
+  margin-right: 0.5em;
+  color: white;
+  background-color: #e42e2e;
+  font-weight: 800;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 55%;
+  margin-top: 4%;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .logout_button:hover {
+  background-color: #b92424;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .logout_button:active {
+  background-color: #911c1c;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .cancel_button {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #5a5a5a;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .cancel_button:hover {
+  background-color: #4d4d4d;
+}
+
+body.dark-mode .content .logoutPrompt .logoutModal .buttons .cancel_button:active {
+  background-color: #414141;
 }
 
 body.dark-mode .content .main {
